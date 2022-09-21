@@ -14,7 +14,6 @@ export default {
 
     async function getData() {
       data = await $http({ url: '/stock/data' })
-      console.log(data);
     }
 
     onMounted(() => {
@@ -49,7 +48,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .chart {
   height: 4.5rem;
 }

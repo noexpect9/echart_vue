@@ -13,7 +13,7 @@ export default {
 <style lang="less" scoped>
 .item {
   height: 5.125rem;
-  border: 1px solid blueviolet;
+  // border: 1px solid blueviolet;
   margin: 0.25rem;
   // background-color: #012070;
 }
