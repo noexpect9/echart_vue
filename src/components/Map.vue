@@ -11,11 +11,11 @@ export default {
     let $echarts = inject('echarts')
     let mapData = reactive({})
     async function getMapData() {
-      mapData = await axios.get('http://localhost:8080/map/china.json')
+      mapData = await axios.get('/map/data')
     }
     onMounted(() => {
       getMapData().then(() => {
-        $echarts.registerMap('ChinaMap', mapData.data)
+        $echarts.registerMap('ChinaMap', mapData.data.chartMap)
         let myChart = $echarts.init(document.querySelector('#map'))
         myChart.setOption({
           geo: {
